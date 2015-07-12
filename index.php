@@ -7,6 +7,7 @@
     <body>
         <h1>Book.org Container</h1>
         <?php
+            // Guzzle library
             require 'vendor/autoload.php';
             use GuzzleHttp\Client;
             use GuzzleHttp\Message\Response;
@@ -22,7 +23,7 @@
                     // iterate $body array
                     foreach($body->content as $book) {
                         echo '<li>';
-                        echo '<a href="detail.php">';
+                        echo '<a href="detail.php?id=' . $book->id . '">';
                         echo '<h3>' . $book->title .'</h3>';
                         echo '</a>';
                         echo '<p>' . $book->author . '</p>';

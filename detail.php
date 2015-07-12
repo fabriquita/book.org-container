@@ -5,13 +5,31 @@
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/main.css">
 </head>
 <body>
-  
-  <h1>A Game of Thrones</h1>
-  <div class="center">
-  <img src="./assets/images/a_game_of_thrones.jpg"/>
-  </div>
-  <div><h2>This is with style</h2><p>This is a paragraph</p><ul><li>First</li><li>Second</li></ul></div>
-            
-  <a href="index.html">Atras</a>
+    <?php
+        // Guzzle library
+        require 'vendor/autoload.php';
+        use GuzzleHttp\Client;
+        use GuzzleHttp\Message\Response;
+
+        $client = new Client();
+
+        $base_url = "http://localhost:8080/nucleus-backend/book/";
+        try {
+            $response = $client->get($base_url . $_GET['id']);
+            if ($response->getStatusCode() == 200) {
+                $book = json_decode($response->getBody());
+                echo '<h1>' . $book->title . '</h1>';
+                //echo '<div class="center">';
+                //echo '<img src="./img/'. $book->image .'"/>';
+                //echo '</div>';
+                echo '<div>'.$book->content.'</div>';
+            } else {
+                echo 'What if? ' . $response->getStatus();
+            }
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    ?>
+    <a href="index.php">Atras</a>
 </body>
 </html>
