@@ -15,7 +15,7 @@
       <div class="container navbar">
         <ul>
             <li class="col-md-4 brand">
-                <a href="index.html"><img src="assets/images/logo.png"></a>
+                <a href="index.php"><img src="assets/images/logo.png"></a>
             </li>
             <li class="col-md-8 text-right">
               <div class="paginator">
