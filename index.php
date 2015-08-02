@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Book.org Container</title>
-        <link rel="stylesheet" type="text/css" href="./assets/stylesheets/main.css">
-    </head>
-    <body>
-        <h1>Book.org Container</h1>
-        <?php
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Book.org Bolivia Tech Hub</title>
+      <link rel="icon" href="assets/images/favicon.ico">
+      <link rel="stylesheet" type="text/css" href="assets/stylesheets/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css">
+  </head>
+  <body>
+      <div class="container navbar">
+        <ul>
+            <li class="col-md-4 brand">
+                <a href="index.html"><img src="assets/images/logo.png"></a>
+            </li>
+            <li class="col-md-8 text-right">
+              <div class="paginator">
+                <a class="button button-primary button-icon button-prev" href="#"></a>
+                <a class="button button-primary button-icon button-next" href="#"></a>
+              </div>
+              <form class="form-search">
+                <input type="text" class="search" placeholder="Busca tu libro...">
+                <button class="button-primary button-icon button-search" type="button"></button>
+              </form>
+            </li>
+        </ul>
+      </div>
+      <div class="container library">
+        <div class="row">
+          <?php
             // Guzzle library
             require 'vendor/autoload.php';
             use GuzzleHttp\Client;
@@ -19,17 +44,16 @@
                 $response = $client->get($base_url);
                 if ($response->getStatusCode() == 200) {
                     $body = json_decode($response->getBody());
-                    echo '<ul class="wrapper columns-3">';
                     // iterate $body array
                     foreach($body->content as $book) {
-                        echo '<li>';
-                        echo '<a href="detail.php?id=' . $book->id . '">';
-                        echo '<h3>' . $book->title .'</h3>';
+                        echo '<div class="col-xs-4 col-md-2">';
+                        echo '<a href="detail.php?id=' . $book->id . '" class="book">';
+                        echo '<div class="cover"><img src="./assets/images/nocover.png"/></div>';
+                        echo '<p>' . $book->title . '</p>';
                         echo '</a>';
-                        echo '<p>' . $book->author . '</p>';
-                        echo '</li>';
+                        echo '</div>';
                     }
-                    echo '</ul>';
+                    
                 } else {
                     echo 'What if? ' . $response->getStatus();
                 }
@@ -37,5 +61,19 @@
                 echo $e->getMessage();
             }
         ?>
-    </body>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="container footer">
+        <div class="row">
+          <div class="col-xs-7">
+            <label>Copyright - Software Factory 2015</label>
+          </div>
+          <div class="col-xs-5 text-right">
+            <a class="button button-primary button-icon button-info" href="#"></a>
+            <a class="button button-primary button-icon button-git" href="#"></a>
+          </div>
+        </div>
+      </div>
+  </body>
 </html>

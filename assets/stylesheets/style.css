@@ -1,0 +1,367 @@
+html, body {
+  font-size: 1em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: sans-serif;
+  margin: 0;
+  color: #222; 
+  background-color: #fff7e3;
+  width: 100%;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+b,
+strong {
+  font-weight: bold;
+}
+small {
+  font-size: 80%;
+}
+img {
+  border: 0;
+}
+hr {
+  height: 0;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+p {
+  margin-top: 0; }
+a {
+  color: #71918e; }
+a:hover {
+  color: #0FA0CE; }
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #999;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  margin: 10px 0px;
+}
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  background-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #9eccc9;
+  border-color: #9eccc9; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #71918e;
+  border-color: #71918e; }
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+}
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #9eccc9;
+  outline: 0; }
+label,
+
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+
+
+/*Navbar*/
+.navbar{
+  height: 70px;
+  clear: both;
+  margin-bottom: 0px;
+  border: 1px solid #9eccc9;
+  border-bottom: none;
+  background-color: #ffffff;
+}
+.navbar ul{
+  list-style: none;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.navbar ul li{
+  height: 100%;
+  margin-bottom: 0px;
+}
+.navbar ul li.brand a{
+  display: inline-block;
+}
+.navbar ul li.brand img{
+  max-height: 70px;
+}
+.navbar .form-search{
+  margin-right: 10px;
+}
+.navbar .form-search, .paginator{
+  float: right;
+  margin-right: 10px;
+}
+.navbar .form-search{
+  margin-right: 4px;
+}
+.navbar .search {
+  margin: 10px 0px;
+  display: inline-block;
+  line-height: 100%;
+  float: left;
+  height: 46px;
+  padding: 1px 10px;
+}
+.paginator .button-icon{
+  width: 48px;
+  height: 48px;
+}
+.button-icon{
+  width: 50px;
+  height: 50px;
+  margin: 10px 0px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 0px;
+}
+.button-search{
+  background-image: url(../images/search.png);
+}
+.button-next{
+  background-image: url(../images/next.png);
+}
+.button-prev{
+  background-image: url(../images/prev.png);
+}
+.button-info{
+  background-image: url(../images/info.png);
+}
+.button-git{
+  background-image: url(../images/git.png);
+}
+
+/*Library*/
+.library {
+  border: 1px solid #9eccc9;
+  border-bottom: none;
+}
+.library .row{
+  background: transparent top right url("../images/bg.jpg") repeat scroll;
+  display: inline-block;
+  width: 100%;
+}
+.book .cover {
+  height: 260px;
+  text-align: center;
+}
+.book .cover img{
+  height: 220px;
+  margin: 15px auto;
+}
+
+.text-right{
+  text-align: right;
+}
+.clearfix{
+  clear: both;
+}
+.pull-right{float: right;}
+/*Table*/
+.desk{
+  background: transparent top right url("../images/bgtable.jpg") repeat scroll;
+  border: 1px solid #9eccc9;
+}
+.desk .description .navbar{
+  border: none;
+}
+.desk .description .navbar h1{margin: 0px; padding: 0px 15px;line-height: 70px; display: inline-block; color: #9eccc9;}
+.desk .description .text{
+  background-color: #EDEDED;
+  padding: 25px;
+}
+/*Footer*/
+.footer{
+  height: 62px;
+  border: 1px solid #9eccc9;
+  border-top: none;
+}
+
+.footer label{
+  line-height: 70px;
+  color: #9eccc9;
+  margin-left: 30px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 140px;
+  }
+  .navbar ul li {
+    height: auto;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  .navbar .form-search, .paginator {
+    float: none;
+    margin-right: auto;
+    display: inline-block;
+  }
+  .navbar .search, .navbar .form-search .button-icon, .navbar .paginator .button-icon  {
+    margin: 0px;
+  } 
+  .navbar .search{
+    width: 100px;
+  }
+  .book .cover {
+    height: 180px;
+  }  
+  .book .cover img {
+    height: 130px;
+    margin-top: 35px;
+  }
+  .library .row {
+      background: transparent top right url("../images/bgmobile.jpg") repeat scroll;
+  }
+  .footer {   
+    height: auto;
+  }
+  .footer label{
+    line-height: 1em;
+    margin: 15px;
+  }
+  .desk {
+    background: transparent top right url("../images/bgtablemobile.jpg") repeat scroll;
+  }  
+  .desk .description .navbar {
+    text-align: center;
+  }
+  .desk .description .navbar h1 {
+    line-height: 35px;
+  } 
+  .desk .book .cover {
+    height: 270px;
+    padding: 10px;
+  } 
+  .desk .book .cover img {
+    height: 100%;
+    margin: 0px;
+  }
+}
