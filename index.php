@@ -48,8 +48,7 @@
                     foreach($body->content as $book) {
                         echo '<div class="col-xs-4 col-md-2">';
                         echo '<a href="detail.php?id=' . $book->id . '" class="book">';
-                        echo '<div class="cover"><img src="./assets/images/nocover.png"/></div>';
-                        echo '<p>' . $book->title . '</p>';
+                        echo '<div class="cover"><div class="book-title">' . $book->title . '</div><img src="./assets/images/nocover.png"/></div>';
                         echo '</a>';
                         echo '</div>';
                     }

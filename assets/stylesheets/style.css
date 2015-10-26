@@ -267,12 +267,23 @@ input[type="radio"] {
 .book .cover {
   height: 260px;
   text-align: center;
+  position: relative;
 }
 .book .cover img{
   height: 220px;
   margin: 15px auto;
 }
-
+.book-title {
+    background: rgba(0, 0, 0, 0.59);
+    bottom: 0px;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    color: rgb(158, 204, 201);
+    padding: 5px;
+}
 .text-right{
   text-align: right;
 }
