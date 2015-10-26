@@ -375,4 +375,8 @@ input[type="radio"] {
     height: 100%;
     margin: 0px;
   }
+  .book-title {
+    font-size: 0.3em;
+    line-height: 1.2em;
+  }  
 }
